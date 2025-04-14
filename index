@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ryan's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Ryan's Portfolio</h2>
+    <ul>
+      <li>
+        <span class="folder" onclick="toggleSection('powerbi-list')">▾ Power BI Portfolio</span>
+        <ul class="submenu" id="powerbi-list">
+          <li><a onclick="loadReport('marketingcmp')">Sales Analytics</a></li>
+          <li><a onclick="loadReport('churnrate')">Customer Churn</a></li>
+          <li><a onclick="loadReport('initial')">Initial Project</a></li>
+          <li><a onclick="loadReport('day1')">Day 1 Project</a></li>
+          <li><a onclick="loadReport('salary')">Salary Project</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="folder" onclick="toggleSection('web-list')">▸ Web Application Portfolio</span>
+        <ul class="submenu" id="web-list" style="display: none;">
+          <li><em>Coming soon...</em></li>
+        </ul>
+      </li>
+      <li>
+        <span class="folder" onclick="toggleSection('ml-list')">▸ Machine Learning Portfolio</span>
+        <ul class="submenu" id="ml-list" style="display: none;">
+          <li><em>Coming soon...</em></li>
+        </ul>
+      </li>
+      <li>
+        <span class="folder" onclick="toggleSection('other-list')">▸ Other Portfolio</span>
+        <ul class="submenu" id="other-list" style="display: none;">
+          <li><em>Coming soon...</em></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h1 id="report-title">Sales Analytics</h1>
+    <iframe id="report-frame"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMjQ5YzI5MTAtMDRmZS00MzBjLWI2ZDgtNmZhMTgxMDc0YzRmIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9"
+      allowfullscreen></iframe>
+    <p class="note">Report created in Power BI and published using GitHub Pages.</p>
+  </div>
+
+  <script>
+    function loadReport(name) {
+      const titles = {
+        marketingcmp: "Sales Analytics",
+        churnrate: "Customer Churn",
+        initial: "Initial Project",
+        day1: "Day 1 Project",
+        salary: "Salary Project"
+      };
+
+      const links = {
+        marketingcmp: "https://app.powerbi.com/view?r=eyJrIjoiMjQ5YzI5MTAtMDRmZS00MzBjLWI2ZDgtNmZhMTgxMDc0YzRmIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
+        churnrate: "https://app.powerbi.com/view?r=eyJrIjoiZDU4M2FhNWQtNjgwYS00MzhkLTkyODUtZTFjNDY0ZDljZDgyIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
+        initial: "https://app.powerbi.com/view?r=eyJrIjoiODcyODE4MTMtM2Y5YS00MTJiLWE0ZDMtMzE4NTA3OGNjZmE5IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
+        day1: "https://app.powerbi.com/view?r=eyJrIjoiOWE1MDYyYWMtZTUxNi00NThmLWE2NGMtYmVmYjhiZDUyZjgyIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
+        salary: "https://app.powerbi.com/view?r=eyJrIjoiNzI4NTgxZGEtZGQ0NS00ZjNmLWFhNGYtZWU3ODA5ZTgxNWE0IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9"
+      };
+
+      document.getElementById("report-frame").src = links[name];
+      document.getElementById("report-title").innerText = titles[name];
+    }
+
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      const visible = section.style.display !== "none";
+      section.style.display = visible ? "none" : "block";
+
+      const folderText = section.previousElementSibling;
+      if (folderText.textContent.includes("▾")) {
+        folderText.textContent = folderText.textContent.replace("▾", "▸");
+      } else {
+        folderText.textContent = folderText.textContent.replace("▸", "▾");
+      }
+    }
+  </script>
+</body>
+</html>
