@@ -5,6 +5,3 @@ Welcome! This is a collection of projects in:
 - Web applications
 - Machine learning
 
-📊 **Live portfolio:** [https://dulaclyon.github.io/portfolio](https://dulaclyon.github.io/portfolio)
-
-More updates coming soon.
