@@ -15,9 +15,6 @@
           <li><a onclick="loadReport('insuranceclaim')">Insurance Claim</a></li>
           <li><a onclick="loadReport('marketingcmp')">Sales Analytics</a></li>
           <li><a onclick="loadReport('churnrate')">Customer Churn</a></li>
-          <li><a onclick="loadReport('initial')">Initial Project</a></li>
-          <li><a onclick="loadReport('day1')">Day 1 Project</a></li>
-          <li><a onclick="loadReport('salary')">Salary Project</a></li>
         </ul>
       </li>
       <li>
@@ -55,18 +52,12 @@
         insuranceclaim :"Insurance Claim",
         marketingcmp: "Sales Analytics",
         churnrate: "Customer Churn",
-        initial: "Initial Project",
-        day1: "Day 1 Project",
-        salary: "Salary Project"
       };
 
       const links = {
         insuranceclaim: "https://app.powerbi.com/view?r=eyJrIjoiMDYzNmIxMGEtYTE4ZC00YzVlLThkZmQtMzNmNjJlNTQxOWU0IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         marketingcmp: "https://app.powerbi.com/view?r=eyJrIjoiMjQ5YzI5MTAtMDRmZS00MzBjLWI2ZDgtNmZhMTgxMDc0YzRmIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         churnrate: "https://app.powerbi.com/view?r=eyJrIjoiZDU4M2FhNWQtNjgwYS00MzhkLTkyODUtZTFjNDY0ZDljZDgyIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
-        initial: "https://app.powerbi.com/view?r=eyJrIjoiODcyODE4MTMtM2Y5YS00MTJiLWE0ZDMtMzE4NTA3OGNjZmE5IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
-        day1: "https://app.powerbi.com/view?r=eyJrIjoiOWE1MDYyYWMtZTUxNi00NThmLWE2NGMtYmVmYjhiZDUyZjgyIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
-        salary: "https://app.powerbi.com/view?r=eyJrIjoiNzI4NTgxZGEtZGQ0NS00ZjNmLWFhNGYtZWU3ODA5ZTgxNWE0IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9"
       };
 
       document.getElementById("report-frame").src = links[name];
