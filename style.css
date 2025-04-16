@@ -130,8 +130,11 @@ iframe {
     height: 70vh;
   }
 
-.sidebar .submenu li em {
+.sidebar ul.submenu li em {
   color: #ffffff !important;
-  font-style: normal; /* optional: remove italic look if you want */
+  font-style: italic;
+  display: block;
+  padding-left: 4px;
 }
+
 
