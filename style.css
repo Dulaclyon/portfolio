@@ -132,6 +132,6 @@ iframe {
 
 
 .submenu li em {
-  color: #ffffff;
+  color: #ffffff !important;
 }
-}
+
