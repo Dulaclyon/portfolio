@@ -130,10 +130,6 @@ iframe {
     height: 70vh;
   }
 
-#other-list li em,
-#web-list li em,
-#ml-list li em {
-  color: #ffffff !important;
+.sidebar .submenu li em {
+  color: white !important;
 }
-
-
