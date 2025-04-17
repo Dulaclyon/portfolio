@@ -130,11 +130,10 @@ iframe {
     height: 70vh;
   }
 
-.sidebar ul.submenu li em {
+#other-list li em,
+#web-list li em,
+#ml-list li em {
   color: #ffffff !important;
-  font-style: italic;
-  display: block;
-  padding-left: 4px;
 }
 
 
