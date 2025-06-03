@@ -12,7 +12,6 @@
       <li>
         <span class="folder" onclick="toggleSection('powerbi-list')">▾ Power BI Portfolio</span>
         <ul class="submenu" id="powerbi-list">
-          <li><a onclick="loadReport('performanceanaly')">Performance Comparison</a></li>
           <li><a onclick="loadReport('insuranceclaim')">Insurance Claim</a></li>
           <li><a onclick="loadReport('marketingcmp')">Sales Analytics</a></li>
           <li><a onclick="loadReport('churnrate')">Customer Churn</a></li>
@@ -43,15 +42,14 @@
   <div class="main">
     <h1 id="report-title">Insurance Claim</h1>
     <iframe id="report-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiMmYzZGQyNWUtMjNjNS00ZDIzLTlkMjItMTgzNWIxZjdlNmE0IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMDYzNmIxMGEtYTE4ZC00YzVlLThkZmQtMzNmNjJlNTQxOWU0IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9"
       allowfullscreen></iframe>
-    <p class="note">Report created in Power BI with data from SQL Server and published using GitHub Pages.</p>
+    <p class="note">Report created in Power BI and published using GitHub Pages.</p>
   </div>
 
   <script>
     function loadReport(name) {
       const titles = {
-        performanceanaly: "Performance Comparison"
         insuranceclaim :"Insurance Claim",
         marketingcmp: "Sales Analytics",
         churnrate: "Customer Churn",
@@ -59,11 +57,11 @@
       };
 
       const links = {
-        performanceanaly: "https://app.powerbi.com/view?r=eyJrIjoiMmYzZGQyNWUtMjNjNS00ZDIzLTlkMjItMTgzNWIxZjdlNmE0IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         insuranceclaim: "https://app.powerbi.com/view?r=eyJrIjoiMDYzNmIxMGEtYTE4ZC00YzVlLThkZmQtMzNmNjJlNTQxOWU0IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         marketingcmp: "https://app.powerbi.com/view?r=eyJrIjoiMjQ5YzI5MTAtMDRmZS00MzBjLWI2ZDgtNmZhMTgxMDc0YzRmIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         churnrate: "https://app.powerbi.com/view?r=eyJrIjoiZDU4M2FhNWQtNjgwYS00MzhkLTkyODUtZTFjNDY0ZDljZDgyIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         halfyearsales: "https://app.powerbi.com/view?r=eyJrIjoiZjUyMDViOGMtOGFiYi00MjY4LWJiMjUtMTlkM2EyYzJjZDRlIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
+        
       };
 
       document.getElementById("report-frame").src = links[name];
@@ -85,6 +83,3 @@
   </script>
 </body>
 </html>
-
-
-
