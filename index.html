@@ -13,6 +13,7 @@
         <span class="folder" onclick="toggleSection('powerbi-list')">▾ Power BI Portfolio</span>
         <ul class="submenu" id="powerbi-list">
           <li><a onclick="loadReport('performanceanalysis')">Performance Analysis</a></li>
+           <li><a onclick="loadReport('IncomeStatement')">Income Statement</a></li>
           <li><a onclick="loadReport('insuranceclaim')">Insurance Claim</a></li>
           <li><a onclick="loadReport('marketingcmp')">Sales Analytics</a></li>
           <li><a onclick="loadReport('churnrate')">Customer Churn</a></li>
@@ -52,6 +53,7 @@
     function loadReport(name) {
       const titles = {
         performanceanalysis: "Performance Analysis",
+        IncomeStatement:"Income Statement",
         insuranceclaim :"Insurance Claim",
         marketingcmp: "Sales Analytics",
         churnrate: "Customer Churn",
@@ -60,6 +62,7 @@
 
       const links = {
         performanceanalysis: "https://app.powerbi.com/view?r=eyJrIjoiYTQ2NDRjM2QtNTUyMi00N2UxLTk2NjktNjE3MzAxNDFlNmEzIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
+        IncomeStatement: "https://app.powerbi.com/view?r=eyJrIjoiYjhkMTYxYWEtZDYwOC00YzY2LWI2MzAtMzBmODczM2ZkNGVlIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         insuranceclaim: "https://app.powerbi.com/view?r=eyJrIjoiMDYzNmIxMGEtYTE4ZC00YzVlLThkZmQtMzNmNjJlNTQxOWU0IiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         marketingcmp: "https://app.powerbi.com/view?r=eyJrIjoiMjQ5YzI5MTAtMDRmZS00MzBjLWI2ZDgtNmZhMTgxMDc0YzRmIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         churnrate: "https://app.powerbi.com/view?r=eyJrIjoiZDU4M2FhNWQtNjgwYS00MzhkLTkyODUtZTFjNDY0ZDljZDgyIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
