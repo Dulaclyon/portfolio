@@ -12,6 +12,7 @@
       <li>
         <span class="folder" onclick="toggleSection('powerbi-list')">▾ Power BI Portfolio</span>
         <ul class="submenu" id="powerbi-list">
+          <li><a onclick="loadReport('inventory')">Inventory Management</a></li>
           <li><a onclick="loadReport('SCManalytics')">SCM Analytics</a></li>
           <li><a onclick="loadReport('performanceanalysis')">Performance Analysis</a></li>
            <li><a onclick="loadReport('IncomeStatement')">Income Statement</a></li>
@@ -53,7 +54,7 @@
   <script>
     function loadReport(name) {
       const titles = {
-  
+        inventory:"Inventory Management",
         SCManalytics:"SCM Analytics",
         performanceanalysis: "Performance Analysis",
         IncomeStatement:"Income Statement",
@@ -64,6 +65,7 @@
       };
 
       const links = {
+        inventory:"https://app.powerbi.com/view?r=eyJrIjoiNjc1ODQxYWUtNGIyNy00ODNkLWIxNjAtNmE2ZTY1MWYwM2MyIiwidCI6ImEwMzA2YjMzLWMyNjUtNGFiYi05Mjg2LWY4YmRmNzE3M2FjNyJ9",
         SCManalytics: "https://app.powerbi.com/view?r=eyJrIjoiOWNiYjFjZWQtNTE3Yi00NDk4LThjNjUtZjg1ZTZkYTdkNmQ1IiwidCI6ImEwMzA2YjMzLWMyNjUtNGFiYi05Mjg2LWY4YmRmNzE3M2FjNyJ9&pageName=f8e360cd06abdc3a5ea2",
         performanceanalysis: "https://app.powerbi.com/view?r=eyJrIjoiYTQ2NDRjM2QtNTUyMi00N2UxLTk2NjktNjE3MzAxNDFlNmEzIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
         IncomeStatement: "https://app.powerbi.com/view?r=eyJrIjoiYjhkMTYxYWEtZDYwOC00YzY2LWI2MzAtMzBmODczM2ZkNGVlIiwidCI6IjUyMDk1N2MxLWZjZWQtNGM0Ny1iZWUwLTdjZjhiODhlZjZiZSJ9",
