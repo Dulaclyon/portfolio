@@ -12,6 +12,7 @@
       <li>
         <span class="folder" onclick="toggleSection('powerbi-list')">▾ Power BI Portfolio</span>
         <ul class="submenu" id="powerbi-list">
+           <li><a onclick="loadReport('Attendance')">Employee Attendance</a></li>
           <li><a onclick="loadReport('ActualtoBudget')">Actual to Budget</a></li>
            <li><a onclick="loadReport('ABCanalysis')">Pareto Analysis</a></li>
           <li><a onclick="loadReport('inventory')">Inventory Management</a></li>
@@ -46,9 +47,9 @@
   </div>
 
   <div class="main">
-    <h1 id="report-title">Actual to Budget</h1>
+    <h1 id="report-title">Employee Attendance</h1>
     <iframe id="report-frame"
-      src="https://app.powerbi.com/view?r=eyJrIjoiODRhZjgwNDMtMjY1ZS00MjliLTg1OWQtMGRlMzQ2YzE0NzRjIiwidCI6ImZmZGZhZmU0LWE0MDgtNDQ2MS1hNGI2LTcyNTNlMWU0Zjc0MiJ9"
+      src="https://app.powerbi.com/view?r=eyJrIjoiYjM4ODE5NzgtNjczYS00ODBlLTliZTktNmZkYTE1OWQzMWNmIiwidCI6ImZmZGZhZmU0LWE0MDgtNDQ2MS1hNGI2LTcyNTNlMWU0Zjc0MiJ9"
       allowfullscreen></iframe>
     <p class="note">Report created in Power BI with data in SQL Server and published using GitHub Pages.</p>
   </div>
@@ -56,6 +57,7 @@
   <script>
     function loadReport(name) {
       const titles = {
+        Attendance: "Employee Attendance",
         ABCanalysis:"Pareto Analysis",
         inventory:"Inventory Management",
         SCManalytics:"SCM Analytics",
@@ -68,6 +70,7 @@
       };
 
       const links = {
+        Attendance:"https://app.powerbi.com/view?r=eyJrIjoiYjM4ODE5NzgtNjczYS00ODBlLTliZTktNmZkYTE1OWQzMWNmIiwidCI6ImZmZGZhZmU0LWE0MDgtNDQ2MS1hNGI2LTcyNTNlMWU0Zjc0MiJ9",
         ActualtoBudget:"https://app.powerbi.com/view?r=eyJrIjoiODRhZjgwNDMtMjY1ZS00MjliLTg1OWQtMGRlMzQ2YzE0NzRjIiwidCI6ImZmZGZhZmU0LWE0MDgtNDQ2MS1hNGI2LTcyNTNlMWU0Zjc0MiJ9",
         ABCanalysis:"https://app.powerbi.com/view?r=eyJrIjoiMjQ5ZjcwNTktYjlmMy00ODllLThhYWYtNzU5ODViZWQ5YmQyIiwidCI6ImZmZGZhZmU0LWE0MDgtNDQ2MS1hNGI2LTcyNTNlMWU0Zjc0MiJ9",
         inventory:"https://app.powerbi.com/view?r=eyJrIjoiNjc1ODQxYWUtNGIyNy00ODNkLWIxNjAtNmE2ZTY1MWYwM2MyIiwidCI6ImEwMzA2YjMzLWMyNjUtNGFiYi05Mjg2LWY4YmRmNzE3M2FjNyJ9",
